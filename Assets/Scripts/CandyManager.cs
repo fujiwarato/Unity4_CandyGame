@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class CandyManager : MonoBehaviour
 {
-    const int DefaultCandyAmount = 30;
+    const int DefaultCandyAmount = 30;//const定数　※あとkr変更不可
     const int RecoverySeconds = 10;
 
     // 現在のキャンディのストック数
@@ -21,7 +21,7 @@ public class CandyManager : MonoBehaviour
     {
         return candy;
     }
-
+    　//キャンディの補充
     public void AddCandy(int amount)
     {
         candy += amount;
@@ -46,7 +46,7 @@ public class CandyManager : MonoBehaviour
         // 回復カウントをしていないときにカウントをスタートさせる
         if (candy < DefaultCandyAmount && counter <= 0)
         {
-            StartCoroutine(RecoverCandy());
+            StartCoroutine(RecoverCandy());//30を下回ったらコルーチンの発動
         }
     }
 
